@@ -104,8 +104,8 @@ function handleFormSubmit() {  // handles form submit without any jquery
         if (xhr.readyState === 4 && xhr.status === 200) {
             window.location = "https://jacobseppanen.me/#four";
             // window.location.replace("https://jacobseppanen.me/#four");
+            return;
         }
-        return;
     }
     // url encode form data for sending as post data
     var encoded = Object.keys(data).map(function (k) {
