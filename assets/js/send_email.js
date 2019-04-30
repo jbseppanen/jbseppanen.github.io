@@ -83,7 +83,7 @@
             var url = "https://script.google.com/macros/s/AKfycbyCYm1v53IOKRgkvmi1MpXEpc83ikaDGKiPZWc/exec"
             var xhr = new XMLHttpRequest();
             xhr.open('POST', url);
-            xhr,addEventListener("load", loadAfterEmail)
+            xhr.addEventListener("load", loadAfterEmail)
             // xhr.withCredentials = true;
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function() {
