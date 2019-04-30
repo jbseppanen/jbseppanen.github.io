@@ -79,7 +79,7 @@
             }
             alert(("I'm here!"))
         } else {
-            disableAllButtons(form);
+            // disableAllButtons(form);
             // var url = form.action;
             var url = "https://script.google.com/macros/s/AKfycbyCYm1v53IOKRgkvmi1MpXEpc83ikaDGKiPZWc/exec"
             var xhr = new XMLHttpRequest();
@@ -89,7 +89,7 @@
             xhr.onreadystatechange = function() {
                 console.log(xhr.status, xhr.statusText);
                 console.log(xhr.responseText);
-                form.reset();
+                // form.reset();
                 var formElements = form.querySelector(".form-elements")
                 if (formElements) {
                     formElements.style.display = "none"; // hide form
