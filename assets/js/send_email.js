@@ -77,7 +77,6 @@
                 invalidEmail.style.display = "block";
                 return false;
             }
-            alert(("I'm here!"))
         } else {
             // disableAllButtons(form);
             // var url = form.action;
@@ -105,6 +104,7 @@
                 return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
             }).join('&');
             xhr.send(encoded);
+            window.location.replace("http://jacobseppanen.me/#four");
         }
     }
 
