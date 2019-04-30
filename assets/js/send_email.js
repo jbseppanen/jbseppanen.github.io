@@ -101,7 +101,10 @@ function handleFormSubmit() {  // handles form submit without any jquery
             if (thankYouMessage)
                 thankYouMessage.style.display = "block";
         }
-        window.location.replace("https://jacobseppanen.me/#four");
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            window.location = "https://jacobseppanen.me/#four";
+            // window.location.replace("https://jacobseppanen.me/#four");
+        }
         return;
     }
     // url encode form data for sending as post data
