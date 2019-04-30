@@ -1,4 +1,4 @@
-// (function () {
+// (function() {
     function validEmail(email) {
         var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
         return re.test(email);
@@ -59,12 +59,12 @@
         return formData;
     }
 
-    function handleFormSubmit(event) {  // handles form submit without any jquery
-        alert("Here!")
-        event.preventDefault();           // we are submitting via xhr below
-        var form = event.target;
-        var data = getFormData(form);         // get the values submitted in the form
-
+    function handleFormSubmit() {  // handles form submit without any jquery
+         // event.preventDefault();           // we are submitting via xhr below
+        // var form = event.target;
+        var form = document.getElementById("gform");
+        var data = getFormData(form);// get the values submitted in the form
+        console.log(data.toString())
         /* OPTION: Remove this comment to enable SPAM prevention, see README.md
         if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
           return false;
@@ -77,9 +77,11 @@
                 invalidEmail.style.display = "block";
                 return false;
             }
+            alert(("I'm here!"))
         } else {
             disableAllButtons(form);
-            var url = form.action;
+            // var url = form.action;
+            var url = "https://script.google.com/macros/s/AKfycbyCYm1v53IOKRgkvmi1MpXEpc83ikaDGKiPZWc/exec"
             var xhr = new XMLHttpRequest();
             xhr.open('POST', url);
             // xhr.withCredentials = true;
