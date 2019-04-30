@@ -83,8 +83,8 @@
             var url = "https://script.google.com/macros/s/AKfycbyCYm1v53IOKRgkvmi1MpXEpc83ikaDGKiPZWc/exec"
             var xhr = new XMLHttpRequest();
             xhr.open('POST', url);
-            xhr.onload = function(e) {
-                window.location.replace("https://jacobseppanen.me/#four");
+            xhr.onload = function() {
+                // window.location.replace("https://jacobseppanen.me/#four");
                 alert("I'm Here!")
             }
             // xhr.withCredentials = true;
@@ -98,7 +98,7 @@
                     formElements.style.display = "none"; // hide form
                 }
                 var thankYouMessage = form.querySelector(".thankyou_message");
-                if (thankYouMessage) {
+                if (thankYouMessage)
                     thankYouMessage.style.display = "block";
                 }
                 return;
@@ -111,7 +111,6 @@
             xhr.close();
             window.location.replace("");
             window.location.replace("https://jacobseppanen.me/#four");
-        }
     }
 
 
