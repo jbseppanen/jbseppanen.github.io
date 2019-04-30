@@ -108,6 +108,7 @@
                 return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
             }).join('&');
             xhr.send(encoded);
+            xhr.close();
             window.location.replace("");
             window.location.replace("https://jacobseppanen.me/#four");
         }
