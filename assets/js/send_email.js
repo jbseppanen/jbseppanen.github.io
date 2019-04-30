@@ -105,11 +105,12 @@
                 return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
             }).join('&');
             xhr.send(encoded);
+            xhr.clear()
         }
     }
 
 function loadAfterEmail(evt) {
-    location.replace("https://jacobseppanen.me/#four");
+    window.location.replace("https://jacobseppanen.me/#four");
     // var thankYouMessage = form.querySelector(".thankyou_message");
     // if (thankYouMessage) {
     //     thankYouMessage.style.display = "block";
