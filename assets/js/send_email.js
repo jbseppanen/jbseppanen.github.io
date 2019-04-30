@@ -108,8 +108,8 @@
         }
     }
 
-function loadAfterEmail() {
-    window.location.replace("https://jacobseppanen.me/#four");
+function loadAfterEmail(evt) {
+    location.replace("https://jacobseppanen.me/#four");
     // var thankYouMessage = form.querySelector(".thankyou_message");
     // if (thankYouMessage) {
     //     thankYouMessage.style.display = "block";
