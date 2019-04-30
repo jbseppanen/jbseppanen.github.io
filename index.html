@@ -123,8 +123,7 @@
             <div class="container">
                 <h3>Contact Me</h3>
                 <p>Questions? Comments? Want to learn more about me? Send me a message.</p>
-                <form id="gform" method="post"
-                      action="https://script.google.com/macros/s/AKfycbyCYm1v53IOKRgkvmi1MpXEpc83ikaDGKiPZWc/exec">
+                <form id="gform" onsubmit="handleFormSubmit()">
                     <div class="row gtr-uniform">
                         <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name"/>
                         </div>
@@ -171,6 +170,6 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script data-cfasync="false" type="text/javascript"
-        src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+        src="assets/js/send_email.js"></script>
 </body>
 </html>
