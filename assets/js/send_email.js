@@ -1,4 +1,4 @@
-// (function() {
+// (function () {
     function validEmail(email) {
         var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
         return re.test(email);
@@ -60,7 +60,7 @@
     }
 
     function handleFormSubmit(event) {  // handles form submit without any jquery
-        // alert("Here!")
+        alert("Here!")
         event.preventDefault();           // we are submitting via xhr below
         var form = event.target;
         var data = getFormData(form);         // get the values submitted in the form
