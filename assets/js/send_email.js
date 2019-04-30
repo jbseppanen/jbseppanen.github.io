@@ -83,6 +83,7 @@
             var url = "https://script.google.com/macros/s/AKfycbyCYm1v53IOKRgkvmi1MpXEpc83ikaDGKiPZWc/exec"
             var xhr = new XMLHttpRequest();
             xhr.open('POST', url);
+            xhr,addEventListener("load", loadAfterEmail)
             // xhr.withCredentials = true;
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function() {
@@ -104,9 +105,13 @@
                 return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
             }).join('&');
             xhr.send(encoded);
-            window.location.replace("http://jacobseppanen.me/#four");
         }
     }
+
+function loadAfterEmail(evt) {
+    window.location.replace("http://jacobseppanen.me/#four");
+    // window.location.reload()
+}
 
     function loaded() {
         console.log("Contact form submission handler loaded successfully.");
