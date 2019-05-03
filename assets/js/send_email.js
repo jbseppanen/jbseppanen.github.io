@@ -1,3 +1,5 @@
+// base script here: https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js
+
 // (function() {
 function validEmail(email) {
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -27,7 +29,7 @@ function getFormData(form) {
             return elements[k].item(0).name;
         }
     }).filter(function (item, pos, self) {
-        return self.indexOf(item) == pos && item;
+        return self.indexOf(item) === pos && item;
     });
 
     var formData = {};
@@ -78,7 +80,7 @@ function handleFormSubmit() {  // handles form submit without any jquery
             return false;
         }
     } else {
-        // disableAllButtons(form);
+        disableAllButtons(form);
         // var url = form.action;
         var url = "https://script.google.com/macros/s/AKfycbyCYm1v53IOKRgkvmi1MpXEpc83ikaDGKiPZWc/exec"
         var xhr = new XMLHttpRequest();
@@ -101,12 +103,9 @@ function handleFormSubmit() {  // handles form submit without any jquery
             if (thankYouMessage)
                 thankYouMessage.style.display = "block";
         }
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            window.location = "https://jacobseppanen.me/#four";
-            // window.location.replace("https://jacobseppanen.me/#four");
-            return;
-        }
+        return;
     }
+
     // url encode form data for sending as post data
     var encoded = Object.keys(data).map(function (k) {
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
