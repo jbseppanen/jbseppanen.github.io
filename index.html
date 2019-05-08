@@ -18,8 +18,8 @@
     <header>
         <span class="image avatar"><img src="images/avatar.jpg" alt=""/></span>
         <h1 id="logo"><a href="http://jacobseppanen.me">Jacob Seppanen</a></h1>
-        <!--        <p>A 2-liner<br/>-->
-        <!--            slugline here</p>-->
+        <!--        <p>A 2-line<br/>-->
+        <!--            description or quote here</p>-->
     </header>
     <nav id="nav">
         <ul>
@@ -39,7 +39,6 @@
             </li>
             <li><a href="https://github.com/jbseppanen" class="icon fa-github"><span class="label">Github</span></a>
             </li>
-            <li><a href="mailto:jbseppanen@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
         </ul>
     </footer>
 </section>
@@ -164,13 +163,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div style="display:none" id="thankyou_message">
-                        <h2> Thank you for contacting me! I'll get back to you soon.</h2>
-                    </div>
                 </form>
-<!--                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe4U3J6np-JiBuWx9RDps-hIVy-iLHbrltBmPVIZGxoSHqwFw/viewform?embedded=true"-->
-<!--                        width="640" height="891" frameborder="0" marginheight="0" marginwidth="0">Loading...-->
-<!--                </iframe>-->
             </div>
 
 
@@ -181,7 +174,10 @@
     <section id="footer">
         <div class="container">
             <ul class="copyright">
-                <li>&copy; Untitled. All rights reserved.</li>
+                <li>&copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                    Jacob Seppanen. &nbsp;All rights reserved.
+                </li>
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
@@ -197,7 +193,5 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script data-cfasync="false" type="text/javascript"
-        src="assets/js/send_email.js"></script>
 </body>
 </html>
